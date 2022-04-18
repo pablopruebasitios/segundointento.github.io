@@ -1,0 +1,98 @@
+/*CONTENEDOR GENERAL*/
+.filters__wrapper {
+  width: 50%;
+  margin: auto;
+  @include laptop {
+    width: 70%;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile_l {
+    margin-top: -20px;
+  }
+}
+
+.filters__title {
+  font-family: "Bebas Neue";
+  color: black;
+  font-size: 6rem;
+  text-align: center;
+
+  @include mobile_l {
+    line-height: 50px;
+  }
+
+  @include mobile_m {
+    font-size: 3.8rem;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+/*CONTENIDO FILTROS*/
+.filters__box {
+  width: 45%;
+  margin: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-between;
+  margin-top: -50px;
+
+  @include laptop_l {
+    width: 70%;
+  }
+
+  @include mobile_l {
+    width: 85%;
+  }
+
+  @include mobile_m {
+    margin-top: 0px;
+  }
+
+  @include mobile_s {
+    width: 95%;
+  }
+
+  .filters__buttons {
+    background-image: linear-gradient(
+      to right,
+      #f00000 0%,
+      #dc281e 51%,
+      #f00000 100%
+    );
+    border-color: transparent;
+    width: 15%;
+    margin: auto;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+
+    @include mobile_l {
+      width: 20%;
+    }
+  }
+
+  .filters__buttons:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+}

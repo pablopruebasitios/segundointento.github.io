@@ -1,0 +1,25 @@
+/*ESTILOS GENERALES*/
+@import "./parciales/base/reset";
+@import "./parciales/base/fonts";
+
+/*COMPONENTES*/
+@import "./parciales/components/wspicon";
+@import "./parciales/components/buttons";
+@import "./parciales/components/modal";
+
+/*LAYOUT*/
+@import "./parciales/layout/nav";
+@import "./parciales/layout/hero";
+@import "./parciales/layout/countdown";
+@import "./parciales/layout/filter";
+@import "./parciales/layout/products";
+@import "./parciales/layout/footer";
+
+/*UTILITIES*/
+@import "./parciales/utilities/tostify";
+@import "./parciales/utilities/mixins";
+@import "./parciales/utilities/offweb"
+
+
+
+

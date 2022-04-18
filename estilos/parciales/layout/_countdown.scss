@@ -1,0 +1,104 @@
+/*CONTENEDOR GENERAL*/
+.countdown__wrapper {
+  height: 300px;
+  background-color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  @include mobile_l {
+    height: 150px;
+  }
+
+  @include mobile_s {
+    height: 180px;
+  }
+}
+
+/*COUNTDOWN*/
+.countdown__box {
+  width: 50%;
+  height: 300px;
+  @include laptop {
+    width: 70%;
+  }
+  @include tablet {
+    width: 95%;
+  }
+
+  @include mobile_l {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .countdown__title {
+    font-family: "Bebas Neue";
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+
+    .countdown__title--span {
+      color: red;
+    }
+
+    @include mobile_m {
+      font-size: 3.3rem;
+    }
+  }
+
+  .countdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 5px;
+    @include mobile_l {
+      display: none;
+    }
+    /*CLASES PROPIAS DE LA LIBRERIA*/
+    .simply-section {
+      background-color: white;
+      height: 150px;
+      width: 150px;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-radius: 10%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .simply-amount {
+      display: block;
+      font-family: "Bebas Neue";
+      font-size: 5rem;
+    }
+
+    .simply-word {
+      font-family: Helvetica;
+      font-family: "Bebas Neue";
+      font-size: 2rem;
+    }
+  }
+}

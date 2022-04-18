@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESERVA TUS MANGAS EN BONDI A KRYPTON</title>
+    <meta name="description" content="Comics y manga desde escobar para todo el pais. Las ultimas novedades siempre">
+    <meta name="keywords" content ="comics, manga, otaku, ivrea, ovnipress,dc,marvel,la comiqueria, la revisteria, panini manga, ovni manga">
+
+    <link rel="stylesheet" href="./estilos/main.css">
+    <style type="text/css">a:link, a:visited, a:active {text-decoration:none;}</style>
+
+    <script defer rel="preconnect" src="https://kit.fontawesome.com/2878399314.js" crossorigin="anonymous"></script>
+
+    <script defer src="./js/main.js"></script>
+    <script src="./js/productos.js"></script>
+
+    <script src="./js/simplyCountdown.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <link rel="shortcut icon" href="assets/generales/fvc.png" alt="favicon" image/x-icon">
+  </head>
+<body>
+  <!--METODO OFF WEB-->
+  <div id="off"><div class = "off"><p>EN ESTE MOMENTO NO ESTAN ABIERTAS LAS PREVENTAS</p></div></div>
+  <!--METODO ON WEB-->
+  <div id="on"> 
+  <!--WEB-->
+    <header>
+    <!--NAV-->
+      <nav class="nav__wrapper" id="nav">
+        <div class="nav__box">
+          <div class="nav__logo">
+            <img src="assets/generales/logo.png" alt="logo bondi a krypton">
+          </div>
+          <div class="nav__icons">
+            <i class="fa-solid fa-cart-shopping" id="cart_shopping" alt="carrito de compras"></i>
+            <i class="fa-solid fa-magnifying-glass" id="search" alt="buscador de productos"></i>
+          </div>  
+        </div>   
+        <!--BUSCADOR INTERNO-->
+        <div class="search__wrapper" id="wrapper_search">
+          <i class="search__exit fa-solid fa-x" id="search_exit" alt="abandonar el buscador de productos"></i>
+          <input class="search__input" type="text" id ="search_input" placeholder="¿Que manga/comic estas buscando?">
+        </div>
+        <!--IMPRESION RESULTADO BUSQUEDA-->
+        <ul class="result__wrapper" id="search_result"></ul>
+      </nav>
+    </header>
+    <main> 
+      <!--HERO SECTION-->
+      <section class="hero__wrapper" id="hero_wrapper">
+        <div class="hero__box">
+          <div class="hero__div" >
+            <p class="hero__caption">RESERVAS HASTA EL LUNES CON 10% DE DESCUENTO</p>
+            <P class="hero__title">DRAGON BALL COLOR <br> SAGA SAIYAJIN</P>
+            <i class="fa-solid fa-angles-down" alt="enlace a seccion todos los productos"></i>
+          </div>
+        </div>
+    </section>
+      <!--COUNTDOWN-->
+      <section class="countdown__wrapper">
+          <div class="countdown__box">
+            <p class="countdown__title">HASTA EL LUNES PODES RESERVAR CON <span class="countdown__title--span">10% DE DESCUENTO</span></p>
+            <div class="countdown" id ="countdown" alt="cuenta regresiva fin de las preventas"></div>
+          </div>
+      </section>
+      <!--PRODUCTS CARDS-->
+      <section class="filters__wrapper">
+          <p class="filters__title">MIRA LAS NOVEDADES DE ESTA SEMANA</p>
+          <!--FILTRO-->
+        <div class="filters__box" id="ancla">
+          <button class="filters__buttons">TODOS</button>
+          <button class="filters__buttons">IVREA</button>
+          <button class="filters__buttons">PANINI</button>
+          <button class="filters__buttons">OVNI</button>
+        </div>
+      </section>
+      <section>
+        <!--RENDERIZA PRODUCTOS CON JS-->
+        <div id="products_wrapper">
+        </div>
+      </section>
+        <!--MODAL CARRITO DE COMPRAS-->
+        <section class="modal__wrapper" id="modal_mask">
+          <div class="modal__box" id ="modal_boxx">
+            <div class="modal__box__section--1">
+              <p class="modal__box__title" id="modal_box-1_p">CARRITO DE COMPRAS</p>
+              <i class="fa-solid fa-x" id="exit_modal" alt="abandonar el carrito de compras"></i>
+            </div>
+            <div class="modal__box__section--2" id="agregarmodal">
+              <p class="modal__box__default" id="vacio">SU CARRITO DE COMPRAS AUN ESTA VACIO</p>
+            </div>
+            <div class="modal__box__section--3" id="modal_box-2">
+              <div class="modal__box__section--3--1">
+                <P>TOTAL:<span class="modal__box__section--3--price" id="precio_final"></span></P>
+                <button class="modal__box__section--3--checkout" id="checkout">INICIAR COMPRA</button>
+              </div>
+            </div>
+          </div> 
+        </section>
+      <!--ICONO WSP-->
+        <div id="wsp_icon">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+          <a href="https://api.whatsapp.com/send?phone=5491171409254&text=Hola%20Bondi!" title="comunicarse por whatsapp" class="wsp__icon" target="_blank" rel="noreferrer noopener">
+          <i class="fa fa-whatsapp my-float" alt="icono de whatsapp"></i></a>
+        </div>
+    </main> 
+      <footer class="footer__wrapper" >
+        <div class="footer__box--1">
+          <p class="footer__company__name">BONDI A KRYPTON</p>
+          <a href="#hero_wrapper"><i class="fa-solid fa-circle-arrow-up" alt="volver a la parte superior de la pagina"></i></a>
+          <div class="footer__links"> 
+            <a href="https://api.whatsapp.com/send?phone=5491171409254&text=Hola%20Bondi!" title="comunicarse por whatsapp" target="blank" rel="noreferrer noopener" alt="enlace a whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/bondiakrypton/" title="comunicarse por instagram" target="blank" rel="noreferrer noopener"><i class="fa-brands fa-instagram" alt="enlace a instagram"></i></a>
+            <a href="https://www.facebook.com/Bondi-a-Krypton-Mangas-y-Comics-105925295216881" title="comunicarse por facebook" target="blank" rel="noreferrer noopener" alt="enlace a facebook"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </div>    
+        </div> 
+        <div class="footer_line"></div>
+        <div class="footer__box--2">
+          <p class="footer__company__copy">© BONDI A KRYPTON - HIPOLITO YRIGOYEN 309 - ESCOBAR</p>
+        </div>
+      </footer>
+  </div> 
+</body>
+</html>
+

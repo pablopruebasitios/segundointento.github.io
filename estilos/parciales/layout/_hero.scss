@@ -1,0 +1,130 @@
+/*CONTENEDOR GENERAL*/
+.hero__wrapper {
+  background-image: url(../../../assets/generales/background.jpg);
+  background-position: left;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include laptop {
+    background-position: center;
+  }
+
+  @include mobile_l {
+    background-position: right;
+  }
+
+  @include mobile_m {
+    height: 70vh;
+  }
+}
+
+/*CONTENIDO HERO SECTION*/
+.hero__box {
+  z-index: 1;
+  width: 80%;
+  display: flex;
+  margin-top: 130px;
+  align-items: center;
+  justify-content: center;
+  @include laptop {
+    width: 95%;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  .hero__div {
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include laptop_l {
+      width: 90%;
+    }
+    @include laptop {
+      width: 100%;
+    }
+
+    .hero__caption {
+      font-family: "Bebas Neue";
+      color: red;
+      font-size: 4rem;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      @include tablet {
+        font-size: 3.5rem;
+      }
+
+      @include mobile_l {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      @include mobile_m {
+        font-size: 2rem;
+      }
+
+      @include mobile_s {
+        width: 90%;
+        font-size: 3rem;
+        line-height: 30px;
+      }
+    }
+
+    .hero__title {
+      font-family: "Bebas Neue";
+      color: white;
+      text-align: center;
+      line-height: 125px;
+      font-size: 15rem;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      @include tablet {
+        font-size: 11.5rem;
+        line-height: 100px;
+      }
+
+      @include mobile_l {
+        font-size: 6rem;
+        line-height: 60px;
+      }
+
+      @include mobile_m {
+        font-size: 5.5rem;
+      }
+
+      @include mobile_s {
+        width: 100%;
+        font-size: 5rem;
+        line-height: 50px;
+      }
+    }
+
+    .fa-solid {
+      color: white;
+      font-size: 5rem;
+
+      @include mobile_l {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+/*PSUDO BR (LAYER SUPERIOR)*/
+.hero__wrapper::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+
+  @include mobile_m {
+    height: 70vh;
+  }
+}

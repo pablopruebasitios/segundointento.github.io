@@ -1,0 +1,23 @@
+.wsp__icon {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #1d9e4d;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  transition-duration: 300ms;
+}
+
+.wsp__icon:hover {
+  transform: scale(1.2);
+  background-color: #25d366;
+}
+
+.my-float {
+  margin-top: 16px;
+}

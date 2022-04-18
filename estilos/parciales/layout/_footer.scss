@@ -1,0 +1,141 @@
+@import "../utilities/mixins";
+/*CONTENEDOR GENERAL*/
+.footer__wrapper {
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*CONTENEDOR FOOTER BOX 1 (DE LA LINEA HACIA ARRIBA)*/
+.footer__box--1 {
+  width: 40%;
+  background-color: 27, 27, 27;
+  margin: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include laptop_l {
+    width: 60%;
+  }
+
+  @include laptop {
+    width: 85%;
+  }
+
+  @include tablet {
+    width: 95%;
+  }
+
+  @include mobile_l {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+  }
+
+  .footer__company__name {
+    font-size: 3rem;
+    color: white;
+    font-family: "Bebas Neue";
+    @include mobile_l {
+      margin-top: 0px;
+      margin-bottom: 60px;
+    }
+  }
+  .fa-solid {
+    font-size: 3rem;
+    color: gray;
+    transition-duration: 300ms;
+    cursor: pointer;
+    @include mobile_l {
+      display: none;
+    }
+  }
+
+  .fa-solid:hover {
+    font-size: 3.5rem;
+    color: white;
+  }
+
+  .footer__links {
+    width: 12%;
+    display: flex;
+    justify-content: space-around;
+    @include tablet {
+      width: 15%;
+      margin-bottom: 20px;
+    }
+
+    @include mobile_l {
+      width: 30%;
+      margin-top: -70px;
+    }
+
+    @include mobile_m {
+      width: 40%;
+    }
+
+    .fa-brands {
+      font-size: 3rem;
+      color: gray;
+      transition-duration: 300ms;
+    }
+
+    .fa-brands:hover {
+      color: white;
+    }
+  }
+}
+
+/*CONTENEDOR FOOTER BOX 2 (DE LA LINEA HACIA ABAJO)*/
+.footer__box--2 {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include laptop {
+    width: 40%;
+  }
+
+  @include tablet {
+    width: 60%;
+  }
+
+  @include mobile_l {
+    width: 100%;
+  }
+
+  .footer__company__copy {
+    color: white;
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    transition-duration: 300ms;
+    @include mobile_m {
+      font-size: 1rem;
+    }
+  }
+
+  .fa-solid {
+    color: white;
+    font-size: 5rem;
+  }
+}
+
+/*LINEA DIVISORIA DEL FOOTER*/
+.footer_line {
+  height: 1px;
+  margin-top: -30px;
+  width: 45%;
+  background-color: white;
+  @include laptop_l {
+    width: 65%;
+  }
+  @include laptop {
+    width: 90%;
+  }
+}
